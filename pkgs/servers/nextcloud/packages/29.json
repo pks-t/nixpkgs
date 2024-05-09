@@ -250,9 +250,9 @@
     ]
   },
   "tasks": {
-    "sha256": "0a1wpb9f08iqxl9vjp0slxwzn0w67ilpk21dsi0nhpm28ns2mhyc",
-    "url": "https://github.com/nextcloud/tasks/releases/download/v0.15.0/tasks.tar.gz",
-    "version": "0.15.0",
+    "sha256": "sha256-L68ughpLad4cr5utOPwefu2yoOgRvnJibqfKmarGXLw=",
+    "url": "https://github.com/nextcloud/tasks/releases/download/v0.16.0/tasks.tar.gz",
+    "version": "0.16.0",
     "description": "Once enabled, a new Tasks menu will appear in your Nextcloud apps menu. From there you can add and delete tasks, edit their title, description, start and due dates and mark them as important. Tasks can be shared between users. Tasks can be synchronized using CalDav (each task list is linked to an Nextcloud calendar, to sync it to your local client: Thunderbird, Evolution, KDE Kontact, iCal … - just add the calendar as a remote calendar in your client). You can download your tasks as ICS files using the download button for each calendar.",
     "homepage": "https://github.com/nextcloud/tasks/",
     "licenses": [
