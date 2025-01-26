@@ -15,8 +15,8 @@ buildKodiAddon rec {
   src = fetchFromGitHub {
     owner = "anxdpanic";
     repo = "plugin.video.youtube";
-    rev = "ee061bd30ff168c5541671845de254ec4ef34fdc";
-    hash = "sha256-0RzMrkycQ6lVlLzbopqCO2UPeduo1aNdQBYF8g7AhXs=";
+    rev = "8959edecaed4c44ca2ef5ccf93ace211ee591f24";
+    hash = "sha256-LKJumScqi3S02pb70f60Ip2hzxX52bMNm93IdQxfIIg=";
   };
 
   propagatedBuildInputs = [
