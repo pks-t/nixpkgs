@@ -12105,6 +12105,7 @@ with pkgs;
   opensmtpd = callPackage ../servers/mail/opensmtpd { };
   opensmtpd-extras = callPackage ../servers/mail/opensmtpd/extras.nix { };
   opensmtpd-filter-rspamd = callPackage ../servers/mail/opensmtpd/filter-rspamd.nix { };
+  opensmtpd-table-passwd = callPackage ../servers/mail/opensmtpd/table-passwd.nix { };
 
   system-sendmail = lowPrio (callPackage ../servers/mail/system-sendmail { });
 
