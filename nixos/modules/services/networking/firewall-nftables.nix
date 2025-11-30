@@ -191,6 +191,8 @@ in
             outgoingTrustedInterfaces != ""
           ) ''oifname { ${outgoingTrustedInterfaces} } accept comment "trusted interfaces"''}
 
+          ip6 nexthdr icmpv6 accept comment "Accept all ICMPv6 messages."
+
           ct state vmap {
             invalid : drop,
             established : accept,
@@ -232,7 +234,6 @@ in
             } accept comment "allow ping"
           ''}
 
-          ip protocol icmpv6 accept comment "Accept all ICMPv6 messages."
           ip6 daddr fe80::/64 udp dport 547 accept comment "DHCPv6 client"
 
           ${cfg.filterOutput.extraRules}
