@@ -19,6 +19,10 @@ mkLibretroCore {
     fetchSubmodules = true;
   };
 
+  patches = [
+    ./patches/citra-gcc-15.patch
+  ];
+
   makefile = "Makefile";
 
   extraBuildInputs = [
