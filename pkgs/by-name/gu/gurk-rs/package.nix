@@ -42,9 +42,8 @@ rustPlatform.buildRustPackage rec {
       stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64
     ) "-framework AppKit";
     OPENSSL_NO_VENDOR = true;
+    PROTOC = "${pkgsBuildHost.protobuf}/bin/protoc";
   };
-
-  PROTOC = "${pkgsBuildHost.protobuf}/bin/protoc";
 
   useNextest = true;
 
