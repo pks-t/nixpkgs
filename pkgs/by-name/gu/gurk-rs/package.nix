@@ -13,14 +13,14 @@
   gurk-rs,
 }:
 
-rustPlatform.buildRustPackage rec {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "gurk-rs";
   version = "0.6.4";
 
   src = fetchFromGitHub {
     owner = "boxdot";
     repo = "gurk-rs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1vnyzKissOciLopWzWN2kmraFevYW/w32KVmP8qgUM4=";
   };
 
@@ -53,7 +53,7 @@ rustPlatform.buildRustPackage rec {
     versionCheckHook
   ];
   doInstallCheck = true;
-  versionCheckProgram = "${placeholder "out"}/bin/${meta.mainProgram}";
+  versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
 
   passthru.updateScript = nix-update-script { };
 
@@ -64,4 +64,4 @@ rustPlatform.buildRustPackage rec {
     license = lib.licenses.agpl3Only;
     maintainers = with lib.maintainers; [ devhell ];
   };
-}
+})
